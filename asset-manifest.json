@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/tafidco/static/css/main.bdb85283.css",
-    "main.js": "/tafidco/static/js/main.b957a5c1.js",
+    "main.js": "/tafidco/static/js/main.d9fa1e1b.js",
     "static/js/787.7f6018b4.chunk.js": "/tafidco/static/js/787.7f6018b4.chunk.js",
     "static/media/revenueIcon.svg": "/tafidco/static/media/revenueIcon.6c4f7119db80f3e2418d3b65ddab1b4f.svg",
     "static/media/totalUser.svg": "/tafidco/static/media/totalUser.bfc94b4c4832703dfcf7b38663492b1c.svg",
@@ -14,11 +14,11 @@
     "index.html": "/tafidco/index.html",
     "static/media/search.svg": "/tafidco/static/media/search.063cb8f0db78e84763a7b4c2b4816000.svg",
     "main.bdb85283.css.map": "/tafidco/static/css/main.bdb85283.css.map",
-    "main.b957a5c1.js.map": "/tafidco/static/js/main.b957a5c1.js.map",
+    "main.d9fa1e1b.js.map": "/tafidco/static/js/main.d9fa1e1b.js.map",
     "787.7f6018b4.chunk.js.map": "/tafidco/static/js/787.7f6018b4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bdb85283.css",
-    "static/js/main.b957a5c1.js"
+    "static/js/main.d9fa1e1b.js"
   ]
 }

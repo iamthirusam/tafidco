@@ -13,13 +13,13 @@ const Header = ({setvalue}) => {
       setvalue(false);
     };
   return (
-    <div className="header">
+    <div className="header" style={{background:"#252b36",height:"70px"}}>
     <h1>NODAL AGENCY</h1>
     <div className="userProfile" onClick={handleDropdownToggle}>
       <div className="userPicture">
         <img src={userPicture} alt="user" />
       </div>
-      <p>Payment Maker</p>
+      <p style={{fontSize:"medium"}}>TUFIDCO Admin</p>
 
       {showDropdown && (
         <div className="user_dropdown">

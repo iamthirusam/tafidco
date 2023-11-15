@@ -4,21 +4,13 @@ import NavBar from "../../navContainer.js";
 
 import userPicture from "../../../assets/image.png";
 import home from "../../../assets/home.svg";
+import Header from "../../header.js";
 
 const MunicipalCorp = () => {
   
   return (
     <>
-      <div className="header">
-        <h1>NODAL AGENCY</h1>
-        <div className="userProfile">
-          <div className="userPicture">
-            <img src={userPicture} alt="user" />
-      
-          </div>
-          <p>Payment Maker</p>
-        </div>
-      </div>
+    <Header setvalue={false} />
       <div className="homeContainer">
         <NavBar />
         <div className="bodyContainer">

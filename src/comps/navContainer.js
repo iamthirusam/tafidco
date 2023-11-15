@@ -2,48 +2,68 @@
 import React, { useState } from "react";
 import "./Home.css";
 import VendorMaster from "./VendorMaster";
-
+import { Link } from "react-router-dom";
 const Sidebar = () => {
   const data = [
     {
       name: "Dashboard",
       icon: "speed",
+      link:"/"
       
     },
     {
       name: "Implementing agency details",
       icon: "badge",
       subNavs: [
-        "Municipal Corporation",
-        "Municipality",
-        "Town Panchayat",
-        "Water Board",
+        {name: "Municipal Corporation", link: "/municipalcorp"},
+        {name: "Municipality", link: "/municipalcorp"},
+        {name: "Town Panchayat", link: "/municipalcorp"},
+        {name: "Water Board", link: "/municipalcorp"}
+        
+       
       ],
     },
     {
       name: "Post Sanction",
       icon: "inventory",
-      subNavs: ["Pre Sanction", "Project Sanction", "Projects"],
+      subNavs: [
+        {name: "Pre Sanction", link: "/presanction"},
+        {name: "Project Sanction", link: "/projectsanction"},
+        {name: "Projects", link: "/projects"},
+       
+      ],
     },
     {
       name: "Administration Sanction",
       icon: "upload_file",
-      subNavs: ["File Upload", "File List"],
+      subNavs: [
+        {name: "File Upload", link: "/fileupload"},
+        {name: "File List", link: "/filelist"}
+      ]
     },
     {
       name: "Financial Progress",
       icon: "finance",
-      subNavs: ["Financial Progress", "Financial Progress List"],
+      subNavs: [
+        {name: "Financial Progress", link: "/financialprogress"},
+        {name: "Financial Progress List", link: "/financialprogresslist"},
+       
+      ],
     },
     {
       name: "Physical Progress",
       icon: "sprint",
-      subNavs: ["Physical Progress Updation"],
+      subNavs: [
+        {name: "Physical Progress Updation", link: "/projectupdation"},
+        
+      ],
     },
     {
       name: "Master",
       icon: "folder_managed",
-      subNavs: ["Vendor Master"],
+      subNavs: [
+        {name: "Vendor Master", link: "/vendormaster"},
+      ]
     },
     {
       name: "User Profile",
@@ -60,44 +80,62 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       {data.map((item, index) => (
+       
         <div
           key={index}
           className={`nav-item ${selectedNavItem === index ? "active-bx" : ""}`}
-          
         >
           {selectedNavItem === index && <div className="active-box">. </div>}
         
+
           <div
             className="nav-item-header"
             onClick={() => handleNavItemClick(index)}
           >
+              {!data.subNavs && <Link to={item.link} key={index}>
             <div className="alignMenu">
-              <span className={`material-symbols-rounded ${selectedNavItem === index ? "active" : ""}`}>
+              <span
+                className={`material-symbols-rounded ${
+                  selectedNavItem === index ? "active" : ""
+                }`}
+              >
                 {item.icon}
               </span>
-              <span className={`nav-text ${selectedNavItem === index ? "active" : ""}`}>
+              <span
+                className={`nav-text ${
+                  selectedNavItem === index ? "active" : ""
+                }`}
+              >
                 {item.name}
               </span>
             </div>
+             </Link >}
             {item.subNavs && (
-              <span className={`material-symbols-rounded toggle-button ${selectedNavItem === index ? "active" : ""}`}>
+              <span
+                className={`material-symbols-rounded toggle-button ${
+                  selectedNavItem === index ? "active" : ""
+                }`}
+              >
                 {selectedNavItem === index ? "expand_less" : "expand_more"}
               </span>
             )}
+
           </div>
+         
+          
           {selectedNavItem === index && item.subNavs && (
             <div className="subnav-container">
-              {item.subNavs.map((subNavItem, subIndex) => (
-                <div key={subIndex} className="subnav-item">
-                  {subNavItem}
-                </div>
+              {item.subNavs.map((item, subIndex) => (
+                <Link to={item.link} key={subIndex}>
+                  <div className="subnav-item">{item.name}</div>
+                </Link>
               ))}
             </div>
           )}
         </div>
       ))}
+      
     </div>
   );
 };
-
 export default Sidebar;

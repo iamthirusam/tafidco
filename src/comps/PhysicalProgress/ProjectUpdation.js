@@ -1,22 +1,22 @@
 import React from "react";
 import "../../Styles/styles.css";
-import NavBar from "../../comps/navContainer.js";
+import NavBar from "../navContainer.js";
 
 import userPicture from "../../assets/image.png";
 import home from "../../assets/home.svg";
 import Header from "../header.js";
 
-const ProjectList = () => {
+const ProjectUpdation = () => {
   
   return (
     <>
-      <Header setvalue={false} />
+     <Header setvalue={false} />
       <div className="homeContainer">
         <NavBar />
         <div className="bodyContainer">
           <div className="bodyHead">
             <div className="headTop">
-              <h3>List Of Project</h3>
+              <h3>Project Updation</h3>
              
               <div className="dashItems">
               <img
@@ -24,15 +24,13 @@ const ProjectList = () => {
                   src={home}
                   alt="searchIcon"
                 />
-                 <p>/  Project Master / Project List</p>
+                 <p>/   Project Updation </p>
                 <div className="searchBar">
                  
                 </div>
               </div>
               </div>
-              <div className="headBody">
-                <p>Project, Edit data, view data and remove from system</p>
-              </div>
+            
             
              
            
@@ -40,7 +38,7 @@ const ProjectList = () => {
 
       
          
-         <div className="tableContainer">
+          <div className="tableContainer">
           <div className="tableTop">
             <div>
                 <p>Results</p>
@@ -57,16 +55,18 @@ const ProjectList = () => {
                   Project Name
                 </td>
                 <td>
-                 Place Of Project
+                 Work Create Date
                 </td>
                 <td>
-                Agency Code
+                Place of Project
                 </td>
                 <td>
-                 District
+                District
                 </td>
+                
+
                 <td>
-                 Scheme
+                Project Status
                 </td>
                
                 <td>
@@ -77,21 +77,23 @@ const ProjectList = () => {
               
                 <td style={{textAlign:"start"}}>
                 (A) Lakshmi Vinayaga Nagar Extension Cross Street – I <br></br>
-<b>Project ID</b> : K_MI_088_2022_W_1993<br></br>
-<b>Agency Type</b> : Municipality
+<b>Agency Code</b> : K_MI_088_2022_W_1993<br></br>
+<b>Sanction Type</b> : Loan
                 
+                </td>
+                <td>
+                05/07/2023
                 </td>
                 <td>
                 Lakshmi Vinayaga Nagar
                 </td>
                 <td>
-                101
-                </td>
-                <td>
                 Thanjavur
                 </td>
                 <td>
-                KNMT
+                <div className="rowAfter">
+                <p className="greenBtn">Approved</p>
+                </div>
                 </td>
                 
                 <td>
@@ -119,4 +121,4 @@ const ProjectList = () => {
   );
 };
 
-export default ProjectList;
+export default ProjectUpdation;

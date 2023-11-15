@@ -68,7 +68,10 @@ const Sidebar = () => {
     {
       name: "User Profile",
       icon: "person",
-      subNavs: ["User Profile", "Logout"],
+      subNavs: [
+        {name: "Users", link: "/users"},
+        {name: "Log Out", link: "/logout"},
+      ],
     },
   ];
   const [selectedNavItem, setSelectedNavItem] = useState(0); // Set to 0 initially

@@ -22,7 +22,7 @@ import FinancialProgressList from "./comps/FinancialProgress/FinancialProgressLi
 
  function App() {
   return (
-    <Router basename="/tufidco">
+    <Router basename="/tafidco">
     <Routes>
       <Route path="/login" element={<SignIn />} />
       <Route path="/navs" element={<VendorMaster />} />

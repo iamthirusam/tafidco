@@ -24,7 +24,7 @@ import Users from "./comps/Users/Users";
 
  function App() {
   return (
-    <Router basename="/tufidco">
+    <Router basename="/tafidco">
     <Routes>
       <Route path="/login" element={<SignIn />} />
       <Route path="/navs" element={<VendorMaster />} />

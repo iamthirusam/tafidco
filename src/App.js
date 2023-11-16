@@ -19,6 +19,7 @@ import ProjectSanction from "./comps/PostSanction/ProjectSanction";
 import FinancialProgressList from "./comps/FinancialProgress/FinancialProgressList";
 import FinancialProgress from "./comps/FinancialProgress/FinancialProgress";
 import Users from "./comps/Users/Users";
+import PreSanctionList from "./comps/PostSanction/PreSanctionList ";
 
 
 
@@ -32,7 +33,7 @@ import Users from "./comps/Users/Users";
       <Route path="/filelist" element={<FileList />} />
       <Route path="/municipalcorp" element={<MunicipalCorp />} />
       <Route path="/vendormaster" element={<VendorMaster />} />
-      <Route path="/presanction" element={<ProjectList />} />
+      <Route path="/presanction" element={<PreSanctionList />} />
       <Route path="/projects" element={<ProjectList />} />
       <Route path="/financialprogress" element={<FinancialProgress />} />
       <Route path="/projectsanction" element={<ProjectSanction />} />

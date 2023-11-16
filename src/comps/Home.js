@@ -15,7 +15,7 @@ const Home = ({ setvalue }) => {
     },
     {
       name: "Municipalities",
-      value: 400,
+      value: 142 ,
       icon: "location_city",
       backgroundColor: "#F4ECDD",
     },

@@ -159,11 +159,11 @@ const ChartComponent = () => {
     <h3>Activities</h3>
     <div className='actIndicators'>
       <select value={selectedMonth} onChange={handleMonthChange}   >
-        <option value="January">January-February 2021</option>
-        <option value="February">February-March 2021</option>
-        <option value="March">March-April 2021</option>
-        <option value="April">April-May 2021</option>
-        <option value="May">May-June 2021</option>
+        <option value="January">January-February 2023</option>
+        <option value="February">February-March 2023</option>
+        <option value="March">March-April 2023</option>
+        <option value="April">April-May 2023</option>
+        <option value="May">May-June 2023</option>
       </select>
       <div className='userIndicator'>
         <div className='alignInd'>

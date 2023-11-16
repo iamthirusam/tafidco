@@ -20,6 +20,29 @@ import FinancialProgressList from "./comps/FinancialProgress/FinancialProgressLi
 import FinancialProgress from "./comps/FinancialProgress/FinancialProgress";
 import Users from "./comps/Users/Users";
 import PreSanctionList from "./comps/PostSanction/PreSanctionList ";
+import SchemeOpeningBalance from "./comps/Finance/SchemeOpeningBalance";
+import SchemeMoneyReceived from "./comps/Finance/SchemeMoneyReceived";
+import SchemeFinancialPosition from "./comps/Finance/SchemeFinancialPosition";
+import ProjectOpeningBalance from "./comps/Finance/ProjectOpeningbalance";
+import ProjectFinancialPosition from "./comps/Finance/ProjectFinancialPosition";
+import AllocationAndExpenditure from "./comps/Finance/AllocationAndExpenditure";
+import BudgetProvision from "./comps/Finance/BudgetProvision";
+import FinanceReport from "./comps/Finance/FinanceReport";
+import ProjectFundAllocation from "./comps/Finance/ProjectFundAllocation";
+import Invoice from "./comps/Others/Invoice";
+import Circular from "./comps/Others/Circular";
+import Attendance from "./comps/Others/Attendance";
+import Issue from "./comps/Others/Issue";
+import Demand from "./comps/Others/demand";
+import Format from "./comps/Others/Format";
+import SOR from "./comps/Setup/Sor";
+import NonSOR from "./comps/Setup/NonSor";
+import MasterData from "./comps/Setup/MasterData";
+import Contractor from "./comps/Others/Contractor";
+import Architect from "./comps/Others/Architect";
+import Supplier from "./comps/Others/Supplier";
+import GanttChart from "./comps/Others/Ganttchart";
+import Report from "./comps/Others/Report";
 
 
 
@@ -40,6 +63,31 @@ import PreSanctionList from "./comps/PostSanction/PreSanctionList ";
       <Route path="/projectupdation" element={<ProjectUpdation />} />
       <Route path="/financialprogresslist" element={<FinancialProgressList />} />
       <Route path="/users" element={<Users />} />
+
+      <Route path="/schemeopeningbalance" element={<SchemeOpeningBalance />} />
+      <Route path="/schememoneyreceived" element={<SchemeMoneyReceived />} />
+      <Route path="/schemefinancialposition" element={<SchemeFinancialPosition />} />
+      <Route path="/projectopeningbalance" element={<ProjectOpeningBalance />} />
+      <Route path="/projectfundallocation" element={<ProjectFundAllocation />} />
+      <Route path="/projectfinancialposition" element={<ProjectFinancialPosition />} />
+      <Route path="/allocationandexpenditure" element={<AllocationAndExpenditure />} />
+      <Route path="/budgetprovision" element={<BudgetProvision />} />
+      <Route path="/financereport" element={<FinanceReport />} />
+      <Route path="/invoice" element={<Invoice />} />
+      <Route path="/demand" element={<Demand />} />
+      <Route path="/issue" element={<Issue />} />
+      <Route path="/attendance" element={<Attendance />} />
+      <Route path="/circular" element={<Circular />} />
+      <Route path="/format" element={<Format />} />
+      <Route path="/report" element={<Report />} />
+      <Route path="/sor" element={<SOR />} />
+      <Route path="/nonsor" element={<NonSOR />} />
+      <Route path="/masterdata" element={<MasterData />} />
+      <Route path="/contractor" element={<Contractor />} />
+      <Route path="/architect" element={<Architect />} />
+      <Route path="/supplier" element={<Supplier />} />
+      <Route path="/ganttchart" element={<GanttChart />} />
+
       <Route path="/" element={<Home />} />
     </Routes>
   </Router>

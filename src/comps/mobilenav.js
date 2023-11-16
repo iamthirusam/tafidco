@@ -3,10 +3,7 @@ import React, { useState } from "react";
 import "./Home.css";
 import VendorMaster from "./VendorMaster";
 import { Link } from "react-router-dom";
-import architect from "../assets/architect.svg"
-import contractor from "../assets/contractor.svg"
-
-const Sidebar = () => {
+const MobileNav = () => {
   const data = [
     {
       name: "Dashboard",
@@ -178,7 +175,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="sidebar">
+    <div className="mobilenav" style={{background:"#fff"}}>
       {data.map((item, index) => (
        
         <div
@@ -238,5 +235,4 @@ const Sidebar = () => {
     </div>
   );
 };
-export default Sidebar;
-
+export default MobileNav;

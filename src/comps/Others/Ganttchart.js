@@ -85,7 +85,7 @@ const GanttChart = () => {
           </div>
          
           <div className="dashboardContainer" >
-          <div className="cardContainer" style={{flexWrap:"wrap"}}>
+          <div className="cardContainer">
             {cardData.map((card, index) => (
               <div
                 className="sorBtn"

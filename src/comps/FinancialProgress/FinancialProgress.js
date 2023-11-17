@@ -35,6 +35,9 @@ const FinancialProgress = () => {
              
            
           </div>
+          <div className="fullContainer">
+                <p>Add New</p>
+          </div>
 
           <div className="CardContainer">
 

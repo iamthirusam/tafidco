@@ -8,6 +8,19 @@ import Header from "../header.js";
 
 const BudgetProvision = () => {
   
+  const data = [
+    {
+      year : "2022-2023",
+      dep : "PWD",
+      scheme : "Road Reworks",
+      alloamount : "Rs 50.00 lakhs",
+      expamount : "Rs 30.00 lakhs",
+      lapseamount : "Rs 40.00 lakhs",
+      
+    },
+  
+      ];
+
   return (
     <>
       <Header setvalue={false} />
@@ -16,7 +29,7 @@ const BudgetProvision = () => {
         <div className="bodyContainer">
           <div className="bodyHead">
             <div className="headTop">
-              <h3>BudgetProvision</h3>
+              <h3>Budget Provision</h3>
              
               <div className="dashItems">
               <img
@@ -24,7 +37,7 @@ const BudgetProvision = () => {
                   src={home}
                   alt="searchIcon"
                 />
-                 <p>/  BudgetProvision</p>
+                 <p>/  Budget Provision</p>
                 <div className="searchBar">
                  
                 </div>
@@ -36,12 +49,15 @@ const BudgetProvision = () => {
            
           </div>
 
-      
+          <div className="fullContainer">
+                <p>Add New</p>
+          </div>
          
-         <div className="tableContainer">
+         
+        <div className="tableContainer">
           <div className="tableTop">
             <div>
-                <p>Results</p>
+                <p></p>
             </div>
             <div className="searchContainer">
               <p>Search</p>
@@ -52,53 +68,65 @@ const BudgetProvision = () => {
             <table className="dataTable">
               <thead>
                 <td>
-                  Project Name
+                  Sr
                 </td>
                 <td>
-                 Place Of Project
+               Financial Year
                 </td>
                 <td>
-                Agency Code
+                Department
                 </td>
                 <td>
-                 District
+               Scheme
                 </td>
+                
+
                 <td>
-                 Scheme
+                Total Allocation Amount
                 </td>
                
                 <td>
-                 Action
+                Total Expenditure Amount
                 </td>
+                <td>
+                Total Lapse Amount
+                </td>
+               
               </thead>
               <tbody>
+                {data.map((item,index)=>(
+                    <tr>
+                      <td style={{width:"50px"}}>
+                    {index+1}
+
+               </td>
+               <td>
+                <p > {item.year}</p>
               
-                <td style={{textAlign:"start"}}>
-                (A) Lakshmi Vinayaga Nagar Extension Cross Street – I <br></br>
-<b>Project ID</b> : K_MI_088_2022_W_1993<br></br>
-<b>Agency Type</b> : Municipality
+               </td>
+               <td>
+               {item.dep}
+               </td>
+               <td>
+               {item.scheme}
+               </td>
+               <td>
+               {item.alloamount}
+               </td>
+               <td>
+               {item.expamount}
+               </td>
+               <td>
+               {item.lapseamount}
+               </td>
+               
+               
+                    </tr>
+                ))}
+              
                 
-                </td>
-                <td>
-                Lakshmi Vinayaga Nagar
-                </td>
-                <td>
-                101
-                </td>
-                <td>
-                Thanjavur
-                </td>
-                <td>
-                KNMT
-                </td>
                 
-                <td>
-                <div className="rowAfter">
-                  <p className="greenBtn">View</p>
-                  <p className="orangeBtn">Edit</p>
-                  <p className="blackBtn">Delete</p>
-                 </div>
-                </td>
+  
             
               </tbody>
             </table>

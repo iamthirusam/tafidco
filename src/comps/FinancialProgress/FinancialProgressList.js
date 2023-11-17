@@ -35,7 +35,9 @@ const FinancialProgressList = () => {
              
            
           </div>
-
+          <div className="fullContainer">
+                <p>Add New</p>
+          </div>
       
          
           <div className="tableContainer">

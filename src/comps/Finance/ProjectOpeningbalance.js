@@ -8,6 +8,39 @@ import Header from "../header.js";
 
 const ProjectOpeningBalance = () => {
   
+  const data = [
+    {
+      project : "Govt School Rework",
+      schemenum : "-",
+      scheme : "Reworks",
+      dep : "Education Department",
+      year : "2023-2024",
+      date : "01-Apr-2023",
+      mode : "Credit Received",
+      fundrec : "Rs 20.00 lakhs",
+      amountspent : "Rs 10.00 lakhs",
+      amount : "Rs 40.00 lakhs",
+      createdby : "By : Admin On : Aug. 1, 2023, 1:31 p.m."
+      
+    },
+    {
+      project : "Govt College Rework",
+      schemenum : "-",
+      scheme : "Reworks",
+      dep : "Education Department",
+      year : "2023-2024",
+      date : "01-Apr-2023",
+      mode : "Credit Received",
+      fundrec : "Rs 300.00 lakhs",
+      amountspent : "Rs 100.00 lakhs",
+      amount : "Rs 500.00 lakhs",
+      createdby : "By : Admin On : Aug. 1, 2023, 1:31 p.m."
+      
+    },
+   
+  
+      ];
+
   return (
     <>
       <Header setvalue={false} />
@@ -16,7 +49,7 @@ const ProjectOpeningBalance = () => {
         <div className="bodyContainer">
           <div className="bodyHead">
             <div className="headTop">
-              <h3>ProjectOpeningBalance</h3>
+              <h3>Project Opening Balance</h3>
              
               <div className="dashItems">
               <img
@@ -24,7 +57,7 @@ const ProjectOpeningBalance = () => {
                   src={home}
                   alt="searchIcon"
                 />
-                 <p>/  ProjectOpeningBalance</p>
+                 <p>/  Project Opening Balance</p>
                 <div className="searchBar">
                  
                 </div>
@@ -37,11 +70,14 @@ const ProjectOpeningBalance = () => {
           </div>
 
       
+          <div className="fullContainer">
+                <p>Add New</p>
+          </div>
          
-         <div className="tableContainer">
+        <div className="tableContainer">
           <div className="tableTop">
             <div>
-                <p>Results</p>
+                <p></p>
             </div>
             <div className="searchContainer">
               <p>Search</p>
@@ -52,53 +88,96 @@ const ProjectOpeningBalance = () => {
             <table className="dataTable">
               <thead>
                 <td>
-                  Project Name
+                  Sr
                 </td>
                 <td>
-                 Place Of Project
+               Project
                 </td>
                 <td>
-                Agency Code
+                Department
                 </td>
                 <td>
-                 District
+               Scheme
                 </td>
+                
+
                 <td>
-                 Scheme
+                Scheme Number
                 </td>
                
                 <td>
-                 Action
+                Year
                 </td>
+                <td>
+                Balance Date
+                </td>
+                <td>
+                Mode
+                </td>
+                <td>
+                Fund Received
+                </td>
+                <td>
+                Gross Amount Spent
+                </td>
+                <td>
+                Amount
+                </td>
+               
+                <td>
+                Created By
+                </td>
+               
               </thead>
               <tbody>
+                {data.map((item,index)=>(
+                    <tr>
+                      <td style={{width:"50px"}}>
+                    {index+1}
+
+               </td>
+               <td>
+                <p > {item.project}</p>
               
-                <td style={{textAlign:"start"}}>
-                (A) Lakshmi Vinayaga Nagar Extension Cross Street – I <br></br>
-<b>Project ID</b> : K_MI_088_2022_W_1993<br></br>
-<b>Agency Type</b> : Municipality
+               </td>
+               <td>
+               {item.dep}
+               </td>
+               <td>
+               {item.scheme}
+               </td>
+               <td>
+               {item.schemenum}
+               </td>
+               <td>
+               {item.year}
+               </td>
+               <td>
+               {item.date}
+               </td>
+               <td>
+               {item.mode}
+               </td>
+               <td>
+               {item.fundrec}
+               </td>
+               <td>
+               {item.amountspent}
+               </td>
+               <td>
+               {item.amount}
+               </td>
+               <td>
+               {item.createdby}
+               </td>
+               
+               
+                    </tr>
+                ))}
+              
                 
-                </td>
-                <td>
-                Lakshmi Vinayaga Nagar
-                </td>
-                <td>
-                101
-                </td>
-                <td>
-                Thanjavur
-                </td>
-                <td>
-                KNMT
-                </td>
                 
-                <td>
-                <div className="rowAfter">
-                  <p className="greenBtn">View</p>
-                  <p className="orangeBtn">Edit</p>
-                  <p className="blackBtn">Delete</p>
-                 </div>
-                </td>
+  
             
               </tbody>
             </table>

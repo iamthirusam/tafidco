@@ -8,113 +8,140 @@ import Header from "../header.js";
 
 const Attendance = () => {
   
-  return (
-    <>
-      <Header setvalue={false} />
-      <div className="homeContainer">
-        <NavBar />
-        <div className="bodyContainer">
-          <div className="bodyHead">
-            <div className="headTop">
-              <h3>Attendance</h3>
-             
-              <div className="dashItems">
-              <img
-                  style={{ cursor: "pointer" }}
-                  src={home}
-                  alt="searchIcon"
-                />
-                 <p>/  Attendance</p>
-                <div className="searchBar">
+  const data = [
+    {
+      Name : "Abhishek Thakur (Divisional Project Engineer (DPE))",
+      Time : "April 15, 2023",
+      Place : "Govt. Excellence H.S School, Bagli",
+      image : "-",
+      status : "Present",
+      
+    },
+    {
+      Name : "Education Department",
+      Time : "April 12, 2023",
+      Place : "Govt. Excellence H.S School, Bagli",
+      image : "-",
+      status : "Present",
+    }
+      ];
+    
+      return (
+        <>
+          <Header setvalue={false} />
+          <div className="homeContainer">
+            <NavBar />
+            <div className="bodyContainer">
+              <div className="bodyHead">
+                <div className="headTop">
+                  <h3>Attendance</h3>
                  
+                  <div className="dashItems">
+                  <img
+                      style={{ cursor: "pointer" }}
+                      src={home}
+                      alt="searchIcon"
+                    />
+                     <p>/  Attendance</p>
+                    <div className="searchBar">
+                     
+                    </div>
+                  </div>
+                  </div>
+                  
+                
+                 
+               
+              </div>
+    
+           <div className="fullContainer">
+                <p>Add New</p>
+          </div>
+             
+          
+            <div className="tableContainer">
+              <div className="tableTop">
+                <div>
+                    <p></p>
+                </div>
+                <div className="searchContainer">
+                  <p>Search</p>
+                  <input className="searchBox">
+                  </input>
                 </div>
               </div>
-              </div>
-              
-            
-             
-           
-          </div>
-
+                <table className="dataTable">
+                  <thead>
+                  <td>
+                    Sr
+                  </td>
+                    <td>
+                   Name
+                    </td>
+                    <td>
+                    Time
+                    </td>
+                    <td>
+                   Place
+                    </td>
+                    
+    
+                    <td>
+                    Image
+                    </td>
+                   
+                    <td>
+                    Status
+                    </td>
+                   
+                  </thead>
+                  <tbody>
+                    {data.map((item,index)=>(
+                        <tr>
+                        <td style={{width:"50px"}}>
+                        {index+1}
+    
+                   </td> 
+                   <td>
+                    <p> {item.Name}</p>
+                  
+                   </td>
+                   <td>
+                   {item.Time}
+                   </td>
+                   <td>
+                   {item.Place}
+                   </td>
+                   <td>
+                   {item.image}
+                   </td>
+                   <td>
+                   {item.status}
+                   </td>
+                   
+                   
+                        </tr>
+                    ))}
+                  
+                    
+                    
       
-         
-         <div className="tableContainer">
-          <div className="tableTop">
-            <div>
-                <p>Results</p>
-            </div>
-            <div className="searchContainer">
-              <p>Search</p>
-              <input className="searchBox">
-              </input>
+                
+                  </tbody>
+                </table>
+                <div style={{display:"flex",justifyContent:"space-between",flexDirection:"row",marginTop:"10px",width:"100%"}}>
+                  <p style={{fontSize:"smaller"}}>Showing 1 to 2 of 2 Entires</p>
+                  <div className="pagebar">
+                    <p className="pageNo">Previous</p>
+                    <p className="pageNoActive">1</p>
+                    <p className="pageNo">Next</p>
+                  </div>
+                </div>
+             </div>
             </div>
           </div>
-            <table className="dataTable">
-              <thead>
-                <td>
-                  Project Name
-                </td>
-                <td>
-                 Place Of Project
-                </td>
-                <td>
-                Agency Code
-                </td>
-                <td>
-                 District
-                </td>
-                <td>
-                 Scheme
-                </td>
-               
-                <td>
-                 Action
-                </td>
-              </thead>
-              <tbody>
-              
-                <td style={{textAlign:"start"}}>
-                (A) Lakshmi Vinayaga Nagar Extension Cross Street – I <br></br>
-<b>Project ID</b> : K_MI_088_2022_W_1993<br></br>
-<b>Agency Type</b> : Municipality
-                
-                </td>
-                <td>
-                Lakshmi Vinayaga Nagar
-                </td>
-                <td>
-                101
-                </td>
-                <td>
-                Thanjavur
-                </td>
-                <td>
-                KNMT
-                </td>
-                
-                <td>
-                <div className="rowAfter">
-                  <p className="greenBtn">View</p>
-                  <p className="orangeBtn">Edit</p>
-                  <p className="blackBtn">Delete</p>
-                 </div>
-                </td>
-            
-              </tbody>
-            </table>
-            <div style={{display:"flex",justifyContent:"space-between",flexDirection:"row",marginTop:"10px",width:"100%"}}>
-              <p style={{fontSize:"smaller"}}>Showing 1 to 2 of 2 Entires</p>
-              <div className="pagebar">
-                <p className="pageNo">Previous</p>
-                <p className="pageNoActive">1</p>
-                <p className="pageNo">Next</p>
-              </div>
-            </div>
-         </div>
-        </div>
-      </div>
-    </>
-  );
-};
+        </>
+      );
+    };
 
 export default Attendance;

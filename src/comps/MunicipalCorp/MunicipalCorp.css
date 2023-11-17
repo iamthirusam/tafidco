@@ -11,40 +11,6 @@
 
 }
 
-.cardBtn{
-    height: 60px;
-    display: flex;
-    padding-left: 10px;
-    padding-right: 10px;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.sorBtn{
-    height: fit-content;
-    display: flex;
-    height: 170px;
-    flex-direction: column;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-
-.mobilenav{
-    display: none;
-    height: 100%;
-}
-.mobilenavicon{
-    display: none;
-    position: relative;
-}
-
 .header{
     width:100%;
     height:80px;
@@ -88,14 +54,11 @@
     border-radius: 50%;
 }
 .sidebar {
-    width:30%;
-    max-width: 250px;
-    height: 100%;
+    width:280px;
     background-color: white;
     color: black;
-    padding:30px 0px;
+ padding:30px 0px;
     display: flex;
-    position: relative;
     flex-direction: column;
     gap: 0px;
 }
@@ -114,7 +77,7 @@
   .nav-item {
     position: relative;
     width:100%;
-    padding-right:20px;
+padding-right:20px;
 
   }
 
@@ -131,14 +94,14 @@
   .nav-item-header {
     cursor: pointer;
     display: flex;
-    gap:3px;
+    gap:5px;
     align-items: center;
     justify-content:space-between;    
   }
   
   
   .nav-item-header:hover{
-    border-left:0px solid #1B8381;
+    border-left:4px solid #1B8381;
  color:#1B8381;
     
   }
@@ -237,19 +200,17 @@
 }
 
 .bodyContainer {
-    padding-left: 20px;
+    padding-left: 60px;
     padding-right: 20px;
     padding-bottom: 100px;
-    
+    width: 100%;
     height: 100%;
-    width: 80%;
     display: flex;
     padding-top: 20px;
     flex-direction: column;
-   
+    gap: 30px;
 
 }
-
 .searchContainer{
     display: flex;
     flex-direction: row;
@@ -314,7 +275,19 @@
     position: relative;
 }
 
-
+.tableContainer table{
+    width:900px;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-top: 30px;
+    border-collapse: collapse;
+    border-spacing:0;
+    border-width:0;
+    
+    
+    
+}
 
 .tableContainer{
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
@@ -322,9 +295,6 @@
     padding: 20PX;
     display: flex;
     flex-direction: column;
-}
-.tableContainer table{
-    width: 100%;
 }
 
 .tableTop{
@@ -334,11 +304,6 @@
     width: 100%;
 }
 
-.dataTable{
-    width: 100%;
-}
-
-
 .dataTable td{
     font-family: "Poppins",sans-serif;
     min-width: 200px;
@@ -346,22 +311,18 @@
     font-size: smaller;
     text-align: center;
     border: 0.1px solid;
-    font-weight: 500;
-    background-color: lightgray;
     
-    color: #000;
+    color: #666;
 }
 .dataTable tbody td{
     font-size: smaller;
     color: #000;
-    background-color: #fff;
-    
 }
 
 .rowAfter{
     align-items: center;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -376,34 +337,29 @@
     min-width: 70px;
     background-color: #9BDD7C;
     margin-bottom: 5px;
-    cursor: pointer;
 }
 
 .orangeBtn{
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 5px;
-    margin-left: 10px;
     padding-bottom: 5px;
     border-radius: 15px;
     color: #fff;
     width: 70px;
     background-color:orange;
     margin-bottom: 5px;
-    cursor: pointer;
 }
 .blackBtn{
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 5px;
-    margin-left: 10px;
     padding-bottom: 5px;
     border-radius: 15px;
     color: #fff;
     min-width: fit-content;
     background-color: #000;
     margin-bottom: 5px;
-    cursor: pointer;
 }
 
 .vendorName{
@@ -427,40 +383,31 @@
 
 }
 
-.Btn{
-    width: fit-content;
-    padding: 10px;
-    background-color: #1B8381;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
-}
-
-.textBoxContainer{
-    width:"50%";
+.pagebar{
     display: flex;
     flex-direction: row;
-    margin-top: 20px;
-   
-}
-.textBoxContainer p{
-    width: 30%;
-}
-
-
-.CardContainer{
-    background-color: #F5F5F5;
+    border: 0.01px solid;
+    border-color: lightgray;
     border-radius: 5px;
-    width: 100%;
-    height: fit-content;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    padding: 40px;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    
 
-   
+}
 
+.pageNo{
+    font-size: smaller;
+    font-family: "Poppins",sans-serif;
+    padding: 10px;
+    color: gray;
+    
+}
+
+.pageNoActive{
+    font-size: smaller;
+    font-family: "Poppins",sans-serif;
+    padding: 10px;
+    color: lightgray;
+    background-color: #1B8381;
+    
 }
 
 .fullContainer p {
@@ -673,21 +620,7 @@
     .chartContainer {
         height: 300px;
         padding: 30px 30px;
-
     }
-
-    .tableContainer table{
-        width: 100%;
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-        margin-top: 30px;
-        border-collapse: collapse;
-        border-spacing:0;
-        border-width:0;
-        
-    }
-
 }
 
 @media only screen and (max-width: 1150px) and (min-width: 769px) {
@@ -699,18 +632,6 @@
         padding: 10px 30px 30px 30px;
         z-index: 999;
         margin-top: 20px;
-    }
-
-    .tableContainer table{
-        width: 100%;
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-        margin-top: 30px;
-        border-collapse: collapse;
-        border-spacing:0;
-        border-width:0;
-        
     }
 
     .dashboardContainer {
@@ -761,22 +682,8 @@
 
 
 @media only screen and (max-width: 1000px) {
-
-    .homeContainer{
-        padding: 0px;
-    }
-   
-
-    .tableContainer table{
-        width: 100%;
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-        margin-top: 30px;
-        border-collapse: collapse;
-        border-spacing:0;
-        border-width:0;
-        
+    .homeContainer {
+        padding: 20px;
     }
 
     .dashboardContainer {
@@ -819,7 +726,6 @@
         gap: 5px;
 
     }
-   
 
     .card img {
         top: 15px;
@@ -844,7 +750,7 @@
 
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 768px) {
     .homeContainer {
         width: 100%;
         height: 100%;
@@ -853,41 +759,6 @@
         gap: 0px;
         display: flex;
         flex-direction: column;
-    }
-    .mobilenavicon{
-        display: block;
-    }
-
-    .sidebar {
-        position: absolute;
-        height: 100%;
-        min-width: 250px;
-        z-index:99999;
-        display: none;
-    }
-
-    .mobilenav {
-        position: absolute;
-        height: max-content;
-        max-width: 250px;
-        z-index:99999;
-        display: block;
-        background-color: #fff;
-       
-    }
-
-    .bodyContainer {
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-bottom: 100px;
-        
-        height: 100%;
-        width: 100%;
-        display: flex;
-        padding-top: 20px;
-        flex-direction: column;
-       
-    
     }
 
     .dashboardContainer {
@@ -906,7 +777,6 @@
     display: block;
     overflow-x: auto;
     white-space: nowrap;
-    width: 100%;
 }
 
 .tableContainer{

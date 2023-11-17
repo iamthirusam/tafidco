@@ -1,12 +1,11 @@
 import React from "react";
-import "./MunicipalCorp.css";
-import NavBar from "../../navContainer.js";
+import "../../Styles/styles.css";
+import NavBar from "../navContainer.js";
 
-import userPicture from "../../../assets/image.png";
-import home from "../../../assets/home.svg";
-import Header from "../../header.js";
+import home from "../../assets/home.svg";
+import Header from "../header.js";
 
-const MunicipalCorp = () => {
+const Municipality = () => {
   
   return (
     <>
@@ -16,7 +15,7 @@ const MunicipalCorp = () => {
         <div className="bodyContainer">
           <div className="bodyHead">
             <div className="headTop">
-              <h3>Municipal Corporation</h3>
+              <h3>Municipality</h3>
              
               <div className="dashItems">
               <img
@@ -119,4 +118,4 @@ const MunicipalCorp = () => {
   );
 };
 
-export default MunicipalCorp;
+export default Municipality;

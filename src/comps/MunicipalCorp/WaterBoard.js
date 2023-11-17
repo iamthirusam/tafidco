@@ -1,12 +1,11 @@
 import React from "react";
-import "./MunicipalCorp.css";
-import NavBar from "../../navContainer.js";
+import "../../Styles/styles.css";
+import NavBar from "../navContainer.js";
 
-import userPicture from "../../../assets/image.png";
-import home from "../../../assets/home.svg";
-import Header from "../../header.js";
+import home from "../../assets/home.svg";
+import Header from "../header.js";
 
-const MunicipalCorp = () => {
+const WaterBoard = () => {
   
   return (
     <>
@@ -16,7 +15,7 @@ const MunicipalCorp = () => {
         <div className="bodyContainer">
           <div className="bodyHead">
             <div className="headTop">
-              <h3>Municipal Corporation</h3>
+              <h3>Water Board</h3>
              
               <div className="dashItems">
               <img
@@ -24,7 +23,7 @@ const MunicipalCorp = () => {
                   src={home}
                   alt="searchIcon"
                 />
-                 <p>/ Municipal Corporation</p>
+                 <p>/  WaterBoard</p>
                 <div className="searchBar">
                  
                 </div>
@@ -45,7 +44,7 @@ const MunicipalCorp = () => {
          <div className="tableContainer">
           <div className="tableTop">
             <div>
-                
+               
             </div>
             <div className="searchContainer">
               <p>Search</p>
@@ -119,4 +118,4 @@ const MunicipalCorp = () => {
   );
 };
 
-export default MunicipalCorp;
+export default WaterBoard;

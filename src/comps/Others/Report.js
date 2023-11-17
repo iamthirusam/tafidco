@@ -8,6 +8,64 @@ import Header from "../header.js";
 
 const Report = () => {
   
+  const cardData = [
+    {
+      name: "Project Summary",
+      icon: "article",
+      backgroundColor: "#0c83ff",
+    },
+    {
+      name: "Project Detail",
+      icon: "article",
+      backgroundColor: "#247297",
+    },
+    {
+      name: "Project Stage",
+      icon: "article",
+      backgroundColor: "#f58646",
+    },
+    {
+      name: "Estimate",
+      icon: "article",
+      backgroundColor: "#EF4444",
+    },
+    {
+      name: "BOQ",
+      icon: "article",
+      backgroundColor: "#f35c86",
+    },
+    {
+      name: "RA",
+      icon: "article",
+      backgroundColor: "#059669",
+    },
+    {
+      name: "Gantt",
+      icon: "article",
+      backgroundColor: "#0c83ff",
+    },
+    {
+      name: "Project Issue",
+      icon: "article",
+      backgroundColor: "#247297",
+    },
+    {
+      name: "Project Picture",
+      icon: "article",
+      backgroundColor: "#f58646",
+    },
+    {
+      name: "Project Video",
+      icon: "article",
+      backgroundColor: "#EF4444",
+    },
+    {
+      name: "Procurement",
+      icon: "article",
+      backgroundColor: "#f35c86",
+    },
+  ];
+
   return (
     <>
       <Header setvalue={false} />
@@ -38,79 +96,23 @@ const Report = () => {
 
       
          
-         <div className="tableContainer">
-          <div className="tableTop">
-            <div>
-                <p>Results</p>
-            </div>
-            <div className="searchContainer">
-              <p>Search</p>
-              <input className="searchBox">
-              </input>
-            </div>
-          </div>
-            <table className="dataTable">
-              <thead>
-                <td>
-                  Project Name
-                </td>
-                <td>
-                 Place Of Project
-                </td>
-                <td>
-                Agency Code
-                </td>
-                <td>
-                 District
-                </td>
-                <td>
-                 Scheme
-                </td>
-               
-                <td>
-                 Action
-                </td>
-              </thead>
-              <tbody>
-              
-                <td style={{textAlign:"start"}}>
-                (A) Lakshmi Vinayaga Nagar Extension Cross Street – I <br></br>
-<b>Project ID</b> : K_MI_088_2022_W_1993<br></br>
-<b>Agency Type</b> : Municipality
-                
-                </td>
-                <td>
-                Lakshmi Vinayaga Nagar
-                </td>
-                <td>
-                101
-                </td>
-                <td>
-                Thanjavur
-                </td>
-                <td>
-                KNMT
-                </td>
-                
-                <td>
-                <div className="rowAfter">
-                  <p className="greenBtn">View</p>
-                  <p className="orangeBtn">Edit</p>
-                  <p className="blackBtn">Delete</p>
-                 </div>
-                </td>
-            
-              </tbody>
-            </table>
-            <div style={{display:"flex",justifyContent:"space-between",flexDirection:"row",marginTop:"10px",width:"100%"}}>
-              <p style={{fontSize:"smaller"}}>Showing 1 to 2 of 2 Entires</p>
-              <div className="pagebar">
-                <p className="pageNo">Previous</p>
-                <p className="pageNoActive">1</p>
-                <p className="pageNo">Next</p>
+          <div className="dashboardContainer">
+          <div className="cardContainer">
+            {cardData.map((card, index) => (
+              <div
+                className="cardBtn"
+                style={{ backgroundColor: card.backgroundColor}}
+              >
+                <span className="material-symbols-rounded" style={{color:"white"}}>{card.icon}</span>
+                <div >
+                  <p style={{color:"white",textAlign:"center",height:"100%"}}>{card.name}</p>
+                </div>
               </div>
-            </div>
-         </div>
+            ))}
+          </div>
+         
+        </div>
+      
         </div>
       </div>
     </>

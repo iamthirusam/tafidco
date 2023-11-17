@@ -8,6 +8,27 @@ import Header from "../header.js";
 
 const SchemeFinancialPosition = () => {
   
+  const data = [
+    {
+      project : "Scheduled Tribe Department",
+      totproj : "149",
+      amount : "Rs 14.00 cr",
+     
+      
+      
+    },
+    {
+      project : "Agriculture Department",
+      totproj : "9",
+      amount : "Rs 14.00 cr",
+     
+      
+      
+    },
+   
+  
+      ];
+
   return (
     <>
       <Header setvalue={false} />
@@ -16,7 +37,7 @@ const SchemeFinancialPosition = () => {
         <div className="bodyContainer">
           <div className="bodyHead">
             <div className="headTop">
-              <h3>SchemeFinancialPosition</h3>
+              <h3>Scheme Financial Position</h3>
              
               <div className="dashItems">
               <img
@@ -24,7 +45,7 @@ const SchemeFinancialPosition = () => {
                   src={home}
                   alt="searchIcon"
                 />
-                 <p>/  SchemeFinancialPosition</p>
+                 <p>/  Scheme Financial Position</p>
                 <div className="searchBar">
                  
                 </div>
@@ -36,12 +57,15 @@ const SchemeFinancialPosition = () => {
            
           </div>
 
-      
+          <div className="fullContainer">
+                <p>Add New</p>
+          </div>
          
-         <div className="tableContainer">
+         
+        <div className="tableContainer" style={{background:"white"}}>
           <div className="tableTop">
             <div>
-                <p>Results</p>
+                <p></p>
             </div>
             <div className="searchContainer">
               <p>Search</p>
@@ -49,59 +73,26 @@ const SchemeFinancialPosition = () => {
               </input>
             </div>
           </div>
-            <table className="dataTable">
-              <thead>
-                <td>
-                  Project Name
-                </td>
-                <td>
-                 Place Of Project
-                </td>
-                <td>
-                Agency Code
-                </td>
-                <td>
-                 District
-                </td>
-                <td>
-                 Scheme
-                </td>
+
+         
+
+          <div style={{width:"100%",background:"white",marginTop:"20px",marginBottom:"20px"}}>
+          {data.map((item,index)=>(
+                  <div style={{marginTop:"20px"}}>
+                     <div style={{display:"flex",flexDirection:"row",justifyContent:"space-between"}}>
+                  <div style={{display:"flex",flexDirection:"row"}}><p  style={{color:"black",fontSize:"medium",marginLeft:"5px"}}>{item.project}</p>
+                  <p style={{color:"white",fontSize:"smaller",marginLeft:"5px",background:"orange",paddingLeft:"5px",paddingRight:"5px",borderRadius:"3px"}}>Total Scheme :{item.totproj}</p>
+                  <p style={{color:"white",fontSize:"smaller",marginLeft:"5px",background:"blue",paddingLeft:"5px",paddingRight:"5px",borderRadius:"3px"}}>Balance Amount : {item.amount}</p>
+                  </div>
+                  <span className="material-symbols-rounded" style={{color:"black"}}>expand_more</span>
+                </div>
                
-                <td>
-                 Action
-                </td>
-              </thead>
-              <tbody>
-              
-                <td style={{textAlign:"start"}}>
-                (A) Lakshmi Vinayaga Nagar Extension Cross Street – I <br></br>
-<b>Project ID</b> : K_MI_088_2022_W_1993<br></br>
-<b>Agency Type</b> : Municipality
-                
-                </td>
-                <td>
-                Lakshmi Vinayaga Nagar
-                </td>
-                <td>
-                101
-                </td>
-                <td>
-                Thanjavur
-                </td>
-                <td>
-                KNMT
-                </td>
-                
-                <td>
-                <div className="rowAfter">
-                  <p className="greenBtn">View</p>
-                  <p className="orangeBtn">Edit</p>
-                  <p className="blackBtn">Delete</p>
-                 </div>
-                </td>
-            
-              </tbody>
-            </table>
+                  </div>
+                  
+                ))}
+          </div>
+
+       
             <div style={{display:"flex",justifyContent:"space-between",flexDirection:"row",marginTop:"10px",width:"100%"}}>
               <p style={{fontSize:"smaller"}}>Showing 1 to 2 of 2 Entires</p>
               <div className="pagebar">
@@ -116,5 +107,4 @@ const SchemeFinancialPosition = () => {
     </>
   );
 };
-
 export default SchemeFinancialPosition;

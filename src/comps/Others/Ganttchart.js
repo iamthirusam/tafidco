@@ -8,6 +8,50 @@ import Header from "../header.js";
 
 const GanttChart = () => {
   
+  const cardData = [
+    {
+      name: "# ACCESSORIES",
+      dep: "MP Public Works Department (MP PWD)",
+      type:"Medical works",
+      prirority:"medium",
+      planstartdate: "March 17, 2023 To April 17, 2024",
+      actstartdate: "May 17, 2023 To June 17, 2024",
+      progree : 50,
+      lastupdatede: "Jan. 10, 2023, 2:17 p.m.",
+    },
+    {
+      name: "# AIR CONDITIONER HVAC",
+      dep: "MP Public Works Department (MP PWD)",
+      type:"Medical works",
+      prirority:"medium",
+      planstartdate: "March 17, 2023 To April 17, 2024",
+      actstartdate: "May 17, 2023 To June 17, 2024",
+      progree : 0,
+      lastupdatede: "Jan. 10, 2023, 2:17 p.m.",
+    },
+    {
+      name: "# Aluminum Structural Glazing Composite Panel and Spider glazing",
+      dep: "MP Public Works Department (MP PWD)",
+      type:"Medical works",
+      prirority:"medium",
+      planstartdate: "March 17, 2023 To April 17, 2024",
+      actstartdate: "May 17, 2023 To June 17, 2024",
+      progree : 10,
+      lastupdatede: "Jan. 10, 2023, 2:17 p.m.",
+    },
+    {
+      name: "# Aluminum Work",
+      dep: "MP Public Works Department (MP PWD)",
+      type:"Medical works",
+      prirority:"medium",
+      planstartdate: "March 17, 2023 To April 17, 2024",
+      actstartdate: "May 17, 2023 To June 17, 2024",
+      progree : 70,
+      lastupdatede: "Jan. 10, 2023, 2:17 p.m.",
+    },
+    
+  ];
+
   return (
     <>
       <Header setvalue={false} />
@@ -16,7 +60,7 @@ const GanttChart = () => {
         <div className="bodyContainer">
           <div className="bodyHead">
             <div className="headTop">
-              <h3>GanttChart</h3>
+              <h3>Gantt Chart</h3>
              
               <div className="dashItems">
               <img
@@ -24,7 +68,7 @@ const GanttChart = () => {
                   src={home}
                   alt="searchIcon"
                 />
-                 <p>/  GanttChart</p>
+                 <p>/  Gantt Chart</p>
                 <div className="searchBar">
                  
                 </div>
@@ -36,81 +80,46 @@ const GanttChart = () => {
            
           </div>
 
-      
-         
-         <div className="tableContainer">
-          <div className="tableTop">
-            <div>
-                <p>Results</p>
-            </div>
-            <div className="searchContainer">
-              <p>Search</p>
-              <input className="searchBox">
-              </input>
-            </div>
+          <div className="fullContainer">
+                <p>Add New</p>
           </div>
-            <table className="dataTable">
-              <thead>
-                <td>
-                  Project Name
-                </td>
-                <td>
-                 Place Of Project
-                </td>
-                <td>
-                Agency Code
-                </td>
-                <td>
-                 District
-                </td>
-                <td>
-                 Scheme
-                </td>
+         
+          <div className="dashboardContainer" >
+          <div className="cardContainer" style={{flexWrap:"wrap"}}>
+            {cardData.map((card, index) => (
+              <div
+                className="sorBtn"
+                style={{ backgroundColor: "white", height:"fit-content"}}
+              >
+                 <div >
+                  <p style={{color:"blue",textAlign:"start",height:"100%",marginTop:"10px",marginBottom:"10px",fontWeight:"medium"}}>{card.name}</p>
+                </div>
+                <div style={{display:"flex",flexDirection:"row",justifyContent:"space-between"}}>
+                  <p  style={{color:"white",fontSize:"smaller",marginLeft:"5px",background:"blue",paddingLeft:"5px",paddingRight:"5px",borderRadius:"3px"}}>Gantt Plan</p><p style={{color:"white",fontSize:"smaller",marginLeft:"5px",background:"orange",paddingLeft:"5px",paddingRight:"5px",borderRadius:"3px"}}>priority : {card.prirority}</p>
+                </div>
                
-                <td>
-                 Action
-                </td>
-              </thead>
-              <tbody>
-              
-                <td style={{textAlign:"start"}}>
-                (A) Lakshmi Vinayaga Nagar Extension Cross Street – I <br></br>
-<b>Project ID</b> : K_MI_088_2022_W_1993<br></br>
-<b>Agency Type</b> : Municipality
+                <div >
+                  <p style={{color:"grey",textAlign:"start",height:"100%",marginTop:"10px",fontSize:"smaller"}}>Plan Start Date & End Date :{card.planstartdate}</p>
+                </div>
+                <div >
+                  <p style={{color:"grey",textAlign:"start",height:"100%",marginTop:"1px",fontSize:"smaller"}}>Actual Start Date & End Date :{card.actstartdate}</p>
+                </div>
+                <div>
+                <progress id="file" value={card.progree} max="100" style={{marginTop:"10px",color:"green"}}> </progress>
+                  </div>
                 
-                </td>
-                <td>
-                Lakshmi Vinayaga Nagar
-                </td>
-                <td>
-                101
-                </td>
-                <td>
-                Thanjavur
-                </td>
-                <td>
-                KNMT
-                </td>
+                <div >
+                  <p style={{color:"black",textAlign:"start",height:"100%",marginTop:"10px",fontSize:"smaller"}}><p>Last Updated : <b>{card.lastupdatede}</b></p></p>
+                </div>
                 
-                <td>
-                <div className="rowAfter">
-                  <p className="greenBtn">View</p>
-                  <p className="orangeBtn">Edit</p>
-                  <p className="blackBtn">Delete</p>
-                 </div>
-                </td>
-            
-              </tbody>
-            </table>
-            <div style={{display:"flex",justifyContent:"space-between",flexDirection:"row",marginTop:"10px",width:"100%"}}>
-              <p style={{fontSize:"smaller"}}>Showing 1 to 2 of 2 Entires</p>
-              <div className="pagebar">
-                <p className="pageNo">Previous</p>
-                <p className="pageNoActive">1</p>
-                <p className="pageNo">Next</p>
+                <span className="material-symbols-rounded" style={{color:"white"}}></span>
+                
               </div>
-            </div>
-         </div>
+            ))}
+          </div>
+         
+        </div>
+      
         </div>
       </div>
     </>

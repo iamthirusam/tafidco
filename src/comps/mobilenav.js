@@ -28,10 +28,9 @@ const MobileNav = () => {
       icon: "badge",
       subNavs: [
         {name: "Municipal Corporation", link: "/municipalcorp"},
-        {name: "Municipality", link: "/municipalcorp"},
-        {name: "Town Panchayat", link: "/municipalcorp"},
-        {name: "Water Board", link: "/municipalcorp"}
-        
+      {name: "Municipality", link: "/municipality"},
+        {name: "Town Panchayat", link: "/townpanchayat"},
+        {name: "Water Board", link: "/waterboard"}
        
       ],
     },

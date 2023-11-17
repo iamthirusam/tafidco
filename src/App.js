@@ -43,6 +43,9 @@ import Architect from "./comps/Others/Architect";
 import Supplier from "./comps/Others/Supplier";
 import GanttChart from "./comps/Others/Ganttchart";
 import Report from "./comps/Others/Report";
+import Municipality from "./comps/MunicipalCorp/Municipality";
+import WaterBoard from "./comps/MunicipalCorp/WaterBoard";
+import TownPanchayat from "./comps/MunicipalCorp/TownPanchayat";
 
 
 
@@ -55,6 +58,10 @@ import Report from "./comps/Others/Report";
       <Route path="/fileupload" element={<FileUpload />} />
       <Route path="/filelist" element={<FileList />} />
       <Route path="/municipalcorp" element={<MunicipalCorp />} />
+      <Route path="/municipality" element={<Municipality />} />
+      <Route path="/townpanchayat" element={<TownPanchayat />} />
+      <Route path="/waterboard" element={<WaterBoard />} />
+
       <Route path="/vendormaster" element={<VendorMaster />} />
       <Route path="/presanction" element={<PreSanctionList />} />
       <Route path="/projects" element={<ProjectList />} />

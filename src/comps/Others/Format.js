@@ -8,6 +8,64 @@ import Header from "../header.js";
 
 const Format = () => {
   
+  const cardData = [
+    {
+      name: "Format - 1",
+      icon: "article",
+      desc:"Acceptance of Work ",
+      backgroundColor: "#0c83ff",
+    },
+    {
+      name: "Format - 2",
+      icon: "article",
+      desc:"Complete Information",
+      backgroundColor: "#247297",
+    },
+    {
+      name: "Format - 3",
+      icon: "article",
+      desc:"Progress Report",
+      backgroundColor: "#f58646",
+    },
+    {
+      name: "Format - 4",
+      icon: "article",
+      desc:"Pending Payment",
+      backgroundColor: "#EF4444",
+    },
+    {
+      name: "Format - 5",
+      icon: "article",
+      desc:"Physical and Financial Progress",
+      backgroundColor: "#f35c86",
+    },
+    {
+      name: "Format - 6",
+      icon: "article",
+      desc:"Format",
+      backgroundColor: "#059669",
+    },
+    {
+      name: "Format - 7",
+      icon: "article",
+      desc:"Initial Work",
+      backgroundColor: "#0c83ff",
+    },
+    {
+      name: "Format - 8",
+      icon: "article",
+      desc:"Completed Work",
+      backgroundColor: "#247297",
+    },
+    {
+      name: "Format - 9",
+      icon: "article",
+      desc:"Format",
+      backgroundColor: "#f58646",
+    },
+    
+  ];
+
   return (
     <>
       <Header setvalue={false} />
@@ -38,79 +96,24 @@ const Format = () => {
 
       
          
-         <div className="tableContainer">
-          <div className="tableTop">
-            <div>
-                <p>Results</p>
-            </div>
-            <div className="searchContainer">
-              <p>Search</p>
-              <input className="searchBox">
-              </input>
-            </div>
-          </div>
-            <table className="dataTable">
-              <thead>
-                <td>
-                  Project Name
-                </td>
-                <td>
-                 Place Of Project
-                </td>
-                <td>
-                Agency Code
-                </td>
-                <td>
-                 District
-                </td>
-                <td>
-                 Scheme
-                </td>
-               
-                <td>
-                 Action
-                </td>
-              </thead>
-              <tbody>
-              
-                <td style={{textAlign:"start"}}>
-                (A) Lakshmi Vinayaga Nagar Extension Cross Street – I <br></br>
-<b>Project ID</b> : K_MI_088_2022_W_1993<br></br>
-<b>Agency Type</b> : Municipality
-                
-                </td>
-                <td>
-                Lakshmi Vinayaga Nagar
-                </td>
-                <td>
-                101
-                </td>
-                <td>
-                Thanjavur
-                </td>
-                <td>
-                KNMT
-                </td>
-                
-                <td>
-                <div className="rowAfter">
-                  <p className="greenBtn">View</p>
-                  <p className="orangeBtn">Edit</p>
-                  <p className="blackBtn">Delete</p>
-                 </div>
-                </td>
-            
-              </tbody>
-            </table>
-            <div style={{display:"flex",justifyContent:"space-between",flexDirection:"row",marginTop:"10px",width:"100%"}}>
-              <p style={{fontSize:"smaller"}}>Showing 1 to 2 of 2 Entires</p>
-              <div className="pagebar">
-                <p className="pageNo">Previous</p>
-                <p className="pageNoActive">1</p>
-                <p className="pageNo">Next</p>
+          <div className="dashboardContainer">
+          <div className="cardContainer">
+            {cardData.map((card, index) => (
+              <div
+                className="cardBtn"
+                style={{background:"white"}}
+              >
+                <span className="material-symbols-rounded" style={{color:"black"}}>{card.icon}</span>
+                <div >
+                  <p style={{color:"black",textAlign:"end",height:"100%"}}>{card.name}</p>
+                  <p style={{fontSize:"smaller",textAlign:"end"}}>{card.desc}</p>
+                </div>
               </div>
-            </div>
-         </div>
+            ))}
+          </div>
+         
+        </div>
+      
         </div>
       </div>
     </>

@@ -38,7 +38,9 @@ const ProjectList = () => {
            
           </div>
 
-      
+          <div className="fullContainer">
+                <p>Add New</p>
+          </div>
          
          <div className="tableContainer">
           <div className="tableTop">

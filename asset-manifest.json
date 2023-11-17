@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/tafidco/static/css/main.419c2485.css",
-    "main.js": "/tafidco/static/js/main.e05cbaa4.js",
+    "main.css": "/tafidco/static/css/main.d07b01d6.css",
+    "main.js": "/tafidco/static/js/main.8a66b6ad.js",
     "static/js/787.7f6018b4.chunk.js": "/tafidco/static/js/787.7f6018b4.chunk.js",
     "static/media/tn-l.png": "/tafidco/static/media/tn-l.0f47287e22100be4e0c9.png",
     "static/media/revenueIcon.svg": "/tafidco/static/media/revenueIcon.6c4f7119db80f3e2418d3b65ddab1b4f.svg",
@@ -17,12 +17,12 @@
     "static/media/apple-icon.svg": "/tafidco/static/media/apple-icon.a792e594fe18353bdd70e37a3510d470.svg",
     "index.html": "/tafidco/index.html",
     "static/media/search.svg": "/tafidco/static/media/search.063cb8f0db78e84763a7b4c2b4816000.svg",
-    "main.419c2485.css.map": "/tafidco/static/css/main.419c2485.css.map",
-    "main.e05cbaa4.js.map": "/tafidco/static/js/main.e05cbaa4.js.map",
+    "main.d07b01d6.css.map": "/tafidco/static/css/main.d07b01d6.css.map",
+    "main.8a66b6ad.js.map": "/tafidco/static/js/main.8a66b6ad.js.map",
     "787.7f6018b4.chunk.js.map": "/tafidco/static/js/787.7f6018b4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.419c2485.css",
-    "static/js/main.e05cbaa4.js"
+    "static/css/main.d07b01d6.css",
+    "static/js/main.8a66b6ad.js"
   ]
 }
